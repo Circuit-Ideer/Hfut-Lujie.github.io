@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>About Lujie | 卑微零零后大学生</title>
+  <title>用Conda创建虚拟环境和管理包 | 卑微零零后大学生</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="00后大学生，热爱技术，热爱分享">
-<meta name="keywords" content="C语言,DL,ML,BCI">
-<meta property="og:type" content="website">
-<meta property="og:title" content="About Lujie">
-<meta property="og:url" content="http://yoursite.com/about/index.html">
+  <meta name="description" content="首先在系统中安装Anaconda可以打开终端输入conda -V检验是否安装以及当前conda的版本。">
+<meta name="keywords" content="Conda,虚拟环境">
+<meta property="og:type" content="article">
+<meta property="og:title" content="用Conda创建虚拟环境和管理包">
+<meta property="og:url" content="http://yoursite.com/2019/08/24/用Conda创建虚拟环境/index.html">
 <meta property="og:site_name" content="卑微零零后大学生">
-<meta property="og:description" content="00后大学生，热爱技术，热爱分享">
+<meta property="og:description" content="首先在系统中安装Anaconda可以打开终端输入conda -V检验是否安装以及当前conda的版本。">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-08-19T09:03:02.325Z">
+<meta property="og:updated_time" content="2019-08-24T08:05:30.542Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="About Lujie">
-<meta name="twitter:description" content="00后大学生，热爱技术，热爱分享">
+<meta name="twitter:title" content="用Conda创建虚拟环境和管理包">
+<meta name="twitter:description" content="首先在系统中安装Anaconda可以打开终端输入conda -V检验是否安装以及当前conda的版本。">
   
     <link rel="alternative" href="/atom.xml" title="卑微零零后大学生" type="application/atom+xml">
   
@@ -165,31 +165,42 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="page-" class="article article-type-page " itemscope itemprop="blogPost">
+            <article id="post-用Conda创建虚拟环境" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      About Lujie
+      用Conda创建虚拟环境和管理包
     </h1>
   
 
 	
         
-        <a href="/about/index.html" class="archive-article-date">
-  	<time datetime="2019-08-19T08:58:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-19</time>
+        <a href="/2019/08/24/用Conda创建虚拟环境/" class="archive-article-date">
+  	<time datetime="2019-08-24T07:58:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-24</time>
 </a>
         
       </header>
 	<div align="center" class="post-count">
-    字数：13字 | 预计阅读时长：1分钟
+    字数：325字 | 预计阅读时长：1分钟
 </div>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="00后大学生，热爱技术，热爱分享"><a href="#00后大学生，热爱技术，热爱分享" class="headerlink" title="00后大学生，热爱技术，热爱分享"></a>00后大学生，热爱技术，热爱分享</h2>
+        <hr>
+<h2 id="首先在系统中安装Anaconda"><a href="#首先在系统中安装Anaconda" class="headerlink" title="首先在系统中安装Anaconda"></a>首先在系统中安装Anaconda</h2><p>可以打开终端输入<code>conda -V</code>检验是否安装以及当前conda的版本。</p>
+<a id="more"></a>
+
+<h2 id="conda常用的命令。"><a href="#conda常用的命令。" class="headerlink" title="conda常用的命令。"></a>conda常用的命令。</h2><p><code>conda list</code> 查看当前环境下安装了哪些包。<br><code>conda env list</code> 或 <code>conda info -e</code> 查看当前存在哪些虚拟环境<br><code>conda update conda</code> 检查更新当前conda</p>
+<h2 id="创建python虚拟环境。"><a href="#创建python虚拟环境。" class="headerlink" title="创建python虚拟环境。"></a>创建python虚拟环境。</h2><p><code>conda create -n your_env_name python=X.X（2.7、3.6等）</code><br>（anaconda 命令创建python版本为X.X、名字为your_env_name的虚拟环境。your_env_name文件可以在Anaconda安装目录envs文件下找到。）</p>
+<h2 id="使用激活-或切换不同python版本-的虚拟环境。"><a href="#使用激活-或切换不同python版本-的虚拟环境。" class="headerlink" title="使用激活(或切换不同python版本)的虚拟环境。"></a>使用激活(或切换不同python版本)的虚拟环境。</h2><p>打开命令行输入<code>python --version</code>可以检查当前python的版本。<br>使用如下命令即可 激活你的虚拟环境(即将python的版本改变)。<br>Linux:  <code>conda activate your_env_name(虚拟环境名称)</code><br>Windows: <code>activate your_env_name(虚拟环境名称)</code></p>
+<h2 id="对虚拟环境中安装额外的包。"><a href="#对虚拟环境中安装额外的包。" class="headerlink" title="对虚拟环境中安装额外的包。"></a>对虚拟环境中安装额外的包。</h2><p>使用命令<code>conda install -n your_env_name [package]</code>即可安装package到your_env_name中</p>
+<h2 id="关闭虚拟环境-即从当前环境退出返回使用PATH环境中的默认python版本-。"><a href="#关闭虚拟环境-即从当前环境退出返回使用PATH环境中的默认python版本-。" class="headerlink" title="关闭虚拟环境(即从当前环境退出返回使用PATH环境中的默认python版本)。"></a>关闭虚拟环境(即从当前环境退出返回使用PATH环境中的默认python版本)。</h2><p>使用如下命令即可。<br>Linux: <code>source deactivate</code><br>Windows: <code>deactivate</code></p>
+<h2 id="删除虚拟环境。"><a href="#删除虚拟环境。" class="headerlink" title="删除虚拟环境。"></a>删除虚拟环境。</h2><p>使用命令<code>conda remove -n your_env_name(虚拟环境名称) –all</code>   即可删除。</p>
+<h2 id="删除环境中的某个包。"><a href="#删除环境中的某个包。" class="headerlink" title="删除环境中的某个包。"></a>删除环境中的某个包。</h2><p>使用命令<code>conda remove –name yourenvnameyourenvnamepackage_name</code> 即可</p>
+
       
 
       
@@ -197,6 +208,21 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Conda</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">虚拟环境</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -247,7 +273,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/about/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/08/24/用Conda创建虚拟环境/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -259,6 +285,16 @@
 </article>
 
   
+<nav id="article-nav">
+  
+  
+    <a href="/2019/08/23/Demo运行-Tensorflow-版本faster-rcnn/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Demo运行:Tensorflow 版本faster rcnn</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -312,7 +348,7 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,

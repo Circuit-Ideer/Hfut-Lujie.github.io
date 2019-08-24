@@ -166,6 +166,89 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-用Conda创建虚拟环境" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/08/24/用Conda创建虚拟环境/">用Conda创建虚拟环境和管理包</a>
+    </h1>
+  
+
+	
+        
+        <a href="/2019/08/24/用Conda创建虚拟环境/" class="archive-article-date">
+  	<time datetime="2019-08-24T07:58:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-24</time>
+</a>
+        
+      </header>
+	<div align="center" class="post-count">
+    字数：325字 | 预计阅读时长：1分钟
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<h2 id="首先在系统中安装Anaconda"><a href="#首先在系统中安装Anaconda" class="headerlink" title="首先在系统中安装Anaconda"></a>首先在系统中安装Anaconda</h2><p>可以打开终端输入<code>conda -V</code>检验是否安装以及当前conda的版本。</p>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Conda</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">虚拟环境</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/08/24/用Conda创建虚拟环境/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Demo运行-Tensorflow-版本faster-rcnn" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -185,91 +268,15 @@
         
       </header>
 	<div align="center" class="post-count">
-    字数：762字 | 预计阅读时长：3分钟
+    字数：761字 | 预计阅读时长：3分钟
 </div>
     
     <div class="article-entry" itemprop="articleBody">
       
         <hr>
-<p>——写于返校路上大同开开往合肥的K891列车中铺，18个小时的火车着实无聊。</p>
+<p>——写于返校路上大同开往合肥的K891列车中铺，18个小时的火车着实无聊。</p>
 <hr>
-<p><a href="https://blog.csdn.net/sinat_33486980/article/details/81045315" target="_blank" rel="noopener">参考博客</a></p>
-<p>该博客的作者通过修改，把GPU版本的代码在自己无CPU的台式机上跑通，作者的台式机是Linux系统(ubuntu16.04)，鉴于Mac终端的命令行指令和Linux相差无几，故以原文为参照我在自己的Mac上也成功跑通，并写下此博客。</p>
-<h2 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置:"></a>环境配置:</h2><p>我使用的是Anaconda来创建虚拟环境和管理包<br>关于创建虚拟环境和管理包的方法可以参照我的另一篇博文</p>
-<p>本机环境(无GPU):</p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Version</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>MacOS</td>
-<td>10.14.1</td>
-</tr>
-<tr>
-<td>tensorflow</td>
-<td>1.2.0</td>
-</tr>
-<tr>
-<td>python</td>
-<td>3.5.6</td>
-</tr>
-<tr>
-<td>opencv-contrib-python</td>
-<td>4.1.0.2</td>
-</tr>
-<tr>
-<td>easydict</td>
-<td>1.9</td>
-</tr>
-<tr>
-<td>cython</td>
-<td>0.29.12</td>
-</tr>
-<tr>
-<td>pillow</td>
-<td>6.1.0</td>
-</tr>
-</tbody></table>
-<h2 id="从Github上下载项目代码和数据"><a href="#从Github上下载项目代码和数据" class="headerlink" title="从Github上下载项目代码和数据"></a>从Github上下载项目代码和数据</h2><p><a href="https://github.com/endernewton/tf-faster-rcnn" target="_blank" rel="noopener">Github地址</a>关于如何从Github上下载代码我不再赘述，项目代码直接放在Desktop或是新建文件夹下都不影响，只要方便自己寻找即可。</p>
-<h2 id="修改配置"><a href="#修改配置" class="headerlink" title="修改配置"></a>修改配置</h2><h3 id="修改lib-model-nms-warpper-py"><a href="#修改lib-model-nms-warpper-py" class="headerlink" title="修改lib/model/nms_warpper.py"></a>修改lib/model/nms_warpper.py</h3><p>将源代码的第12行注释</p>
-<pre><code># from nms.gpu_nms import gpu_nms</code></pre><h3 id="修改lib-setup-py"><a href="#修改lib-setup-py" class="headerlink" title="修改lib/setup.py"></a>修改lib/setup.py</h3><p>将源代码的第55行注释</p>
-<pre><code># CUDA = locate_cuda()</code></pre><p>将源代码的第87行注释</p>
-<pre><code># self.set_executable(&apos;compiler_so&apos;, CUDA[&apos;nvcc&apos;])</code></pre><p>将源代码的120到136行逐行注释<br>    <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">#Extension(&apos;nms.gpu_nms&apos;,</span><br><span class="line">#    [&apos;nms/nms_kernel.cu&apos;, &apos;nms/gpu_nms.pyx&apos;],</span><br><span class="line">#    library_dirs=[CUDA[&apos;lib64&apos;]],</span><br><span class="line">#    libraries=[&apos;cudart&apos;],</span><br><span class="line">#    language=&apos;c++&apos;,</span><br><span class="line">#    runtime_library_dirs=[CUDA[&apos;lib64&apos;]],</span><br><span class="line">    # this syntax is specific to this build system</span><br><span class="line">    # we&apos;re only going to use certain compiler args with nvcc and not with gcc</span><br><span class="line">    # the implementation of this trick is in customize_compiler() below</span><br><span class="line">#   extra_compile_args=&#123;&apos;gcc&apos;: [&quot;-Wno-unused-function&quot;],</span><br><span class="line">#                        &apos;nvcc&apos;: [&apos;-arch=sm_52&apos;,</span><br><span class="line">#                                 &apos;--ptxas-options=-v&apos;,</span><br><span class="line">#                                 &apos;-c&apos;,</span><br><span class="line">#                                 &apos;--compiler-options&apos;,</span><br><span class="line">#                                 &quot;&apos;-fPIC&apos;&quot;]&#125;,</span><br><span class="line">#    include_dirs = [numpy_include, CUDA[&apos;include&apos;]]</span><br><span class="line">#)</span><br></pre></td></tr></table></figure></p>
-<h2 id="链接cython模块"><a href="#链接cython模块" class="headerlink" title="链接cython模块"></a>链接cython模块</h2><p>终端切换到lib目录下，依次输入下面三条命令:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">make clean</span><br><span class="line">make</span><br><span class="line">cd ..</span><br></pre></td></tr></table></figure>
-
-<p>前面步骤完成，此时就不会报错</p>
-<h2 id="安装Python-COCOAPI以使用COCO数据库"><a href="#安装Python-COCOAPI以使用COCO数据库" class="headerlink" title="安装Python COCOAPI以使用COCO数据库"></a>安装Python COCOAPI以使用COCO数据库</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">cd data</span><br><span class="line">git clone https://github.com/pdollar/coco.git</span><br><span class="line">cd coco/PythonAPI</span><br><span class="line">make</span><br><span class="line">cd ../../..</span><br></pre></td></tr></table></figure>
-
-<p>此时终端的目录是主目录tf-faster-rcnn</p>
-<h2 id="测试预训练模型"><a href="#测试预训练模型" class="headerlink" title="测试预训练模型"></a>测试预训练模型</h2><h3 id="下载预训练模型"><a href="#下载预训练模型" class="headerlink" title="下载预训练模型"></a>下载预训练模型</h3><p>要用到的模型: voc_0712_80k-110k.tgz<br><a href="https://pan.baidu.com/s/1kWkF3fT" target="_blank" rel="noopener">百度网盘下载地址</a>(关于百度网盘的限速问题我在博客首页的友情链接里给出了解决方法)下载并解压之后放到data文件夹中就行。使用命令</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar xvf voc_0712_80k-110k.tgz</span><br></pre></td></tr></table></figure>
-
-<p>解压得到voc_2007_trainval+voc_2012_trainval文件夹</p>
-<h3 id="建立预训练模型的软连接"><a href="#建立预训练模型的软连接" class="headerlink" title="建立预训练模型的软连接"></a>建立预训练模型的软连接</h3><p>终端进入data目录下，依次运行下面命令:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">NET=res101</span><br><span class="line">TRAIN_IMDB=voc_2007_trainval+voc_2012_trainval</span><br><span class="line">mkdir -p output/$&#123;NET&#125;/$&#123;TRAIN_IMDB&#125;</span><br></pre></td></tr></table></figure>
-
-<p>运行完前三条命令，会新建一个目录tf-faster-rcnn/data/output/res101/voc_2007_trainval+voc_2012_trainval</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd output/$&#123;NET&#125;/$&#123;TRAIN_IMDB&#125;</span><br></pre></td></tr></table></figure>
-
-<p>然后运行第四条命令，终端进入voc_2007_trainval+voc_2012_trainval文件夹</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ln -s ../../../voc_2007_trainval+voc_2012_trainval ./default</span><br></pre></td></tr></table></figure>
-
-<p>运行第五条命令，产生一个名字为default的链接文件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd ../../..</span><br></pre></td></tr></table></figure>
-
-<p>接着运行最后的一条命令，将终端目录切换到了data目录下</p>
-<h2 id="运行demo"><a href="#运行demo" class="headerlink" title="运行demo"></a>运行demo</h2><p>终端进入data目录下，运行如下命令:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">../tools/demo.py</span><br></pre></td></tr></table></figure>
-
-<p>开始载入图片</p>
-<p><img src="https://i.loli.net/2019/08/23/B2djJkwQtFHMhuG.png" alt="开始加载图片"></p>
-<p>大功告成，图像识别结果如下:</p>
-<p><img src="https://i.loli.net/2019/08/23/sbdN98niQ4lGCEj.jpg" alt="结果">    </p>
-
+        
       
 
       
@@ -518,6 +525,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">markdown</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Conda</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">虚拟环境</a>
               </li>
             
             <div class="clearfix"></div>

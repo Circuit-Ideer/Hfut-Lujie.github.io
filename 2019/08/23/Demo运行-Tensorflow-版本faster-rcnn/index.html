@@ -8,20 +8,20 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>Demo运行:Tensorflow 版本faster rcnn | 卑微零零后大学生</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="——写于返校路上大同开开往合肥的K891列车中铺，18个小时的火车着实无聊。  参考博客 该博客的作者通过修改，把GPU版本的代码在自己无CPU的台式机上跑通，作者的台式机是Linux系统(ubuntu16.04)，鉴于Mac终端的命令行指令和Linux相差无几，故以原文为参照我在自己的Mac上也成功跑通，并写下此博客。 环境配置:我使用的是Anaconda来创建虚拟环境和管理包关于创建虚拟环境">
+  <meta name="description" content="——写于返校路上大同开往合肥的K891列车中铺，18个小时的火车着实无聊。">
 <meta name="keywords" content="demo,faster rcnn">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Demo运行:Tensorflow 版本faster rcnn">
 <meta property="og:url" content="http://yoursite.com/2019/08/23/Demo运行-Tensorflow-版本faster-rcnn/index.html">
 <meta property="og:site_name" content="卑微零零后大学生">
-<meta property="og:description" content="——写于返校路上大同开开往合肥的K891列车中铺，18个小时的火车着实无聊。  参考博客 该博客的作者通过修改，把GPU版本的代码在自己无CPU的台式机上跑通，作者的台式机是Linux系统(ubuntu16.04)，鉴于Mac终端的命令行指令和Linux相差无几，故以原文为参照我在自己的Mac上也成功跑通，并写下此博客。 环境配置:我使用的是Anaconda来创建虚拟环境和管理包关于创建虚拟环境">
+<meta property="og:description" content="——写于返校路上大同开往合肥的K891列车中铺，18个小时的火车着实无聊。">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://i.loli.net/2019/08/23/B2djJkwQtFHMhuG.png">
 <meta property="og:image" content="https://i.loli.net/2019/08/23/sbdN98niQ4lGCEj.jpg">
-<meta property="og:updated_time" content="2019-08-23T13:31:27.149Z">
+<meta property="og:updated_time" content="2019-08-24T07:59:47.203Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Demo运行:Tensorflow 版本faster rcnn">
-<meta name="twitter:description" content="——写于返校路上大同开开往合肥的K891列车中铺，18个小时的火车着实无聊。  参考博客 该博客的作者通过修改，把GPU版本的代码在自己无CPU的台式机上跑通，作者的台式机是Linux系统(ubuntu16.04)，鉴于Mac终端的命令行指令和Linux相差无几，故以原文为参照我在自己的Mac上也成功跑通，并写下此博客。 环境配置:我使用的是Anaconda来创建虚拟环境和管理包关于创建虚拟环境">
+<meta name="twitter:description" content="——写于返校路上大同开往合肥的K891列车中铺，18个小时的火车着实无聊。">
 <meta name="twitter:image" content="https://i.loli.net/2019/08/23/B2djJkwQtFHMhuG.png">
   
     <link rel="alternative" href="/atom.xml" title="卑微零零后大学生" type="application/atom+xml">
@@ -187,16 +187,18 @@
         
       </header>
 	<div align="center" class="post-count">
-    字数：762字 | 预计阅读时长：3分钟
+    字数：761字 | 预计阅读时长：3分钟
 </div>
     
     <div class="article-entry" itemprop="articleBody">
       
         <hr>
-<p>——写于返校路上大同开开往合肥的K891列车中铺，18个小时的火车着实无聊。</p>
+<p>——写于返校路上大同开往合肥的K891列车中铺，18个小时的火车着实无聊。</p>
 <hr>
+<a id="more"></a>
+
 <p><a href="https://blog.csdn.net/sinat_33486980/article/details/81045315" target="_blank" rel="noopener">参考博客</a></p>
-<p>该博客的作者通过修改，把GPU版本的代码在自己无CPU的台式机上跑通，作者的台式机是Linux系统(ubuntu16.04)，鉴于Mac终端的命令行指令和Linux相差无几，故以原文为参照我在自己的Mac上也成功跑通，并写下此博客。</p>
+<p>该博客的作者通过修改，把GPU版本的代码在自己无GPU的台式机上跑通，作者的台式机是Linux系统(ubuntu16.04)，鉴于Mac终端的命令行指令和Linux相差无几，故以原文为参照我在自己的Mac上也成功跑通，并写下此博客。</p>
 <h2 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置:"></a>环境配置:</h2><p>我使用的是Anaconda来创建虚拟环境和管理包<br>关于创建虚拟环境和管理包的方法可以参照我的另一篇博文</p>
 <p>本机环境(无GPU):</p>
 <table>
@@ -358,6 +360,15 @@
   
 <nav id="article-nav">
   
+    <a href="/2019/08/24/用Conda创建虚拟环境/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          用Conda创建虚拟环境和管理包
+        
+      </div>
+    </a>
+  
   
     <a href="/2019/08/19/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">Hello World</div>
@@ -502,6 +513,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">markdown</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Conda</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">虚拟环境</a>
               </li>
             
             <div class="clearfix"></div>
