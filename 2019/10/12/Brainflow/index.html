@@ -6,19 +6,24 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2019 | 卑微零零后大学生</title>
+  <title>脑电控制Demo:基于OpenBCI和BrainFlow | 卑微零零后大学生</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Best or nothing.">
-<meta name="keywords" content="C语言,DL,ML,BCI">
-<meta property="og:type" content="website">
-<meta property="og:title" content="卑微零零后大学生">
-<meta property="og:url" content="http://yoursite.com/archives/2019/index.html">
+  <meta name="description" content="——忠实记录每一个感动自己的技术瞬间">
+<meta name="keywords" content="脑机接口,OpenBCI,demo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="脑电控制Demo:基于OpenBCI和BrainFlow">
+<meta property="og:url" content="http://yoursite.com/2019/10/12/Brainflow/index.html">
 <meta property="og:site_name" content="卑微零零后大学生">
-<meta property="og:description" content="Best or nothing.">
+<meta property="og:description" content="——忠实记录每一个感动自己的技术瞬间">
 <meta property="og:locale" content="en">
+<meta property="og:image" content="https://i.loli.net/2019/10/10/qNxIsarKcF9m4wB.jpg">
+<meta property="og:image" content="https://cdn.shopify.com/s/files/1/0613/9353/products/32bit_top_1_grande_b53f6d18-f68f-4571-8d25-9fa8b36c8427.jpg?v=1559766647">
+<meta property="og:image" content="https://i.loli.net/2019/10/10/iTEh64yWULbHlor.png">
+<meta property="og:updated_time" content="2019-10-10T14:34:15.179Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="卑微零零后大学生">
-<meta name="twitter:description" content="Best or nothing.">
+<meta name="twitter:title" content="脑电控制Demo:基于OpenBCI和BrainFlow">
+<meta name="twitter:description" content="——忠实记录每一个感动自己的技术瞬间">
+<meta name="twitter:image" content="https://i.loli.net/2019/10/10/qNxIsarKcF9m4wB.jpg">
   
     <link rel="alternative" href="/atom.xml" title="卑微零零后大学生" type="application/atom+xml">
   
@@ -164,36 +169,94 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-Brainflow" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/12/Brainflow/" class="archive-article-date">
-  	<time datetime="2019-10-12T13:11:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-12</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/12/Brainflow/">脑电控制Demo:基于OpenBCI和BrainFlow</a>
+    <h1 class="article-title" itemprop="name">
+      脑电控制Demo:基于OpenBCI和BrainFlow
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+	
+        
+        <a href="/2019/10/12/Brainflow/" class="archive-article-date">
+  	<time datetime="2019-10-12T13:11:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-12</time>
+</a>
+        
+      </header>
+	<div align="center" class="post-count">
+    字数：659字 | 预计阅读时长：3分钟
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<p><strong><em>——忠实记录每一个感动自己的技术瞬间</em></strong> </p>
+<hr>
+<a id="more"></a>
+<p>从开始接触OpenBCI到现在已经差不多过去半年了,但自己一直没做出什么像样的成果,还始终停留在玩自带GUI的阶段,最近一段时间和团队的小伙伴在经历了pyOpenBCI的各种Bug处于绝望时,无意间在Github的回答中得知了brainflow的存在,于是开始了新的尝试并终于取得了一些小的成功,虽然在master们的眼中这太easy了,但对于我们确实是一丝曙光,足以欣喜若狂.</p>
+<h5 id="咳咳…言归正传"><a href="#咳咳…言归正传" class="headerlink" title="咳咳…言归正传"></a>咳咳…言归正传</h5><h3 id="本机环境"><a href="#本机环境" class="headerlink" title="本机环境:"></a>本机环境:</h3><table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Version</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>MacOS</td>
+<td>10.14.1</td>
+</tr>
+<tr>
+<td>python</td>
+<td>3.6.0</td>
+</tr>
+<tr>
+<td>matplotlib</td>
+<td>3.1.1</td>
+</tr>
+<tr>
+<td>Cmake</td>
+<td>3.15.2</td>
+</tr>
+</tbody></table>
+<h2 id="官网文档"><a href="#官网文档" class="headerlink" title="官网文档"></a>官网文档</h2><p><a href="https://brainflow.readthedocs.io/en/latest/index.html" target="_blank" rel="noopener">BrainFlow官方文档地址</a></p>
+<h2 id="从Github上下载项目源代码"><a href="#从Github上下载项目源代码" class="headerlink" title="从Github上下载项目源代码"></a>从Github上下载项目源代码</h2><p><a href="https://github.com/OpenBCI/brainflow" target="_blank" rel="noopener">BrainFlowGithub地址</a></p>
+<h2 id="在Supported-Boards找到对应的API参数"><a href="#在Supported-Boards找到对应的API参数" class="headerlink" title="在Supported Boards找到对应的API参数"></a>在Supported Boards找到对应的API参数</h2><p>我用电路板型号是OpenBCI Cyton with Wifi Shield<br><strong><em>API params:</em></strong></p>
+<ul>
+<li>board Id: 5</li>
+<li>port: shield ip address (192.168.4.1 for direct mode)<br><img src="https://i.loli.net/2019/10/10/qNxIsarKcF9m4wB.jpg" alt="Wifi模块实物图"><br><img src="https://cdn.shopify.com/s/files/1/0613/9353/products/32bit_top_1_grande_b53f6d18-f68f-4571-8d25-9fa8b36c8427.jpg?v=1559766647" alt="Cython板"></li>
+</ul>
+<h2 id="编译核心模块"><a href="#编译核心模块" class="headerlink" title="编译核心模块"></a>编译核心模块</h2><p>BrainFlow的核心库是用C++写的,所以要用到C++的编译,这里推荐使用Cmake,Windows和Linux用户的Compilation过程请参考官方文档</p>
+<h3 id="Mac"><a href="#Mac" class="headerlink" title="Mac"></a>Mac</h3><ul>
+<li>Install Cmake &gt;= 3.10 官网没有详细指定Mac需要的Cmake版本,这里参照Linux</li>
+<li>在终端下打开brainflow-master文件夹,运行:<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">run .\tools\build_mac.sh</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h2 id="Python开发环境配置"><a href="#Python开发环境配置" class="headerlink" title="Python开发环境配置"></a>Python开发环境配置</h2><p>BrainFlow的配置相对来说很简单,基本不依赖太多第三方库<br>关于虚拟环境的创建和包的下载不再赘述，可参考我的另一篇博文<a href="https://hfut-lujie.github.io/2019/08/24/%E7%94%A8Conda%E5%88%9B%E5%BB%BA%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83/" target="_blank" rel="noopener">用Conda创建虚拟环境</a></p>
+<ul>
+<li>pip install -i <a href="https://pypi.tuna.tsinghua.edu.cn/simple" target="_blank" rel="noopener">https://pypi.tuna.tsinghua.edu.cn/simple</a> brainflow (使用清华的镜像源)</li>
+</ul>
+<p>安装成功之后</p>
+<ul>
+<li>cd python-package</li>
+<li>python -m pip install -e .</li>
+</ul>
+<h2 id="收集和处理脑电数据"><a href="#收集和处理脑电数据" class="headerlink" title="收集和处理脑电数据"></a>收集和处理脑电数据</h2><p><strong><em>Wifi Direction</em></strong><br>关于如何切换电路板为Wifi Direction模式我也不详写，附上<a href="https://docs.openbci.com/docs/Welcome.html" target="_blank" rel="noopener">OpenBCI的官方文档</a><br>现在前期的准备工作已经全部结束了,让我们打开板子电源开始快乐的使用<strong><em>Python SDK</em></strong><br>在源代码python-package/examples/brainflow_get_data.py下有官网给的的样例代码,大家可以按照SDK指南DIY自己的项目了.</p>
+<h2 id="Python-SDK参数传递的注意事项"><a href="#Python-SDK参数传递的注意事项" class="headerlink" title="Python SDK参数传递的注意事项"></a>Python SDK参数传递的注意事项</h2><p>这是当时踩的一个坑,因为不熟悉Python的argparse如何传递参数,最让我感动的是我在Github上拉取了一个issues,居然被原作者回答了！！！在睡觉前最后一眼收到答复,改完代码,整个人激动到半夜两点多才睡着.<br><img src="https://i.loli.net/2019/10/10/iTEh64yWULbHlor.png" alt="小感动"><br>接下来讲一下错误信息的解决办法,在命令行下需要这样运行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python brainflow_get_data.py --port 192.168.4.1 --board 5 (change ip port to your port)</span><br></pre></td></tr></table></figure>
+
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -213,145 +276,106 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/10/12/Brainflow/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/24/用Conda创建虚拟环境/" class="archive-article-date">
-  	<time datetime="2019-08-24T07:58:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-24</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/08/24/用Conda创建虚拟环境/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">用Conda创建虚拟环境和管理包</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/24/用Conda创建虚拟环境/">用Conda创建虚拟环境和管理包</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Conda</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">虚拟环境</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/23/Demo运行-Tensorflow-版本faster-rcnn/" class="archive-article-date">
-  	<time datetime="2019-08-23T07:14:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-23</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/23/Demo运行-Tensorflow-版本faster-rcnn/">Demo运行:Tensorflow 版本faster rcnn</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">demo</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">faster rcnn</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/19/hello-world/" class="archive-article-date">
-  	<time datetime="2019-08-19T03:02:26.051Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-19</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/19/hello-world/">Hello World</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">markdown</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -377,8 +401,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
